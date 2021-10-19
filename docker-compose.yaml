@@ -1,0 +1,9 @@
+version: '3'
+services:
+    ml-training:
+        build: .
+        container_name: ml-training
+        volumes:
+            - './app:/app/'
+        tty: true
+        command: python linear.py
